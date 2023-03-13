@@ -1,6 +1,9 @@
+C:\Users\rev_x\Desktop\Sample-ecommerce\src\main\java\it\sonia\ecommerce\dao\UserDAO.java
 C:\Users\rev_x\Desktop\Sample-ecommerce\src\main\java\it\sonia\ecommerce\controller\genericController.java
 C:\Users\rev_x\Desktop\Sample-ecommerce\src\main\java\it\sonia\ecommerce\config\JwtAthFilter.java
+C:\Users\rev_x\Desktop\Sample-ecommerce\src\main\java\it\sonia\ecommerce\controller\AuthenticationController.java
 C:\Users\rev_x\Desktop\Sample-ecommerce\src\main\java\it\sonia\ecommerce\EcommerceApplication.java
+C:\Users\rev_x\Desktop\Sample-ecommerce\src\main\java\it\sonia\ecommerce\controller\AuthenticationRequest.java
 C:\Users\rev_x\Desktop\Sample-ecommerce\src\main\java\it\sonia\ecommerce\config\SecurityConfig.java
 C:\Users\rev_x\Desktop\Sample-ecommerce\src\main\java\it\sonia\ecommerce\model\User.java
 C:\Users\rev_x\Desktop\Sample-ecommerce\src\main\java\it\sonia\ecommerce\config\JwtUtil.java

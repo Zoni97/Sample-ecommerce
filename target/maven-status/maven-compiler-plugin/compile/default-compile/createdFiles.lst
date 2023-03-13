@@ -1,0 +1,14 @@
+it\sonia\ecommerce\config\SecurityConfig$1.class
+it\sonia\ecommerce\model\Product.class
+it\sonia\ecommerce\repository\UserRepository.class
+it\sonia\ecommerce\model\User.class
+it\sonia\ecommerce\controller\genericController.class
+it\sonia\ecommerce\config\JwtUtil.class
+it\sonia\ecommerce\controller\AuthenticationRequest.class
+it\sonia\ecommerce\config\SecurityConfig.class
+it\sonia\ecommerce\EcommerceApplication.class
+it\sonia\ecommerce\dao\UserDAO.class
+it\sonia\ecommerce\controller\AuthenticationController.class
+it\sonia\ecommerce\model\Role.class
+it\sonia\ecommerce\config\JwtAthFilter.class
+it\sonia\ecommerce\model\Payment.class

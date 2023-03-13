@@ -16,12 +16,12 @@ public class UserDAO {
     public final static List<UserDetails> APPLICATION_USERS = Arrays.asList(
         new User(
             "rev_xx@live.it",
-            "passoword",
+            "pw",
             Collections.singleton(new SimpleGrantedAuthority("ROLE_ADMIN"))
         ),
         new User(
-            "user.mail@gmail.com",
-            "passoword",
+            "rev_xxuser@live.it",
+            "password",
             Collections.singleton(new SimpleGrantedAuthority("ROLE_USER"))
         )
     );
