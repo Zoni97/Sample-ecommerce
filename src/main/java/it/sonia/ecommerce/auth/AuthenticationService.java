@@ -1,7 +1,6 @@
 package it.sonia.ecommerce.auth;
 
 import it.sonia.ecommerce.config.JwtService;
-import it.sonia.ecommerce.controller.RegisterRequest;
 import it.sonia.ecommerce.model.Role;
 import it.sonia.ecommerce.token.Token;
 import it.sonia.ecommerce.token.TokenType;

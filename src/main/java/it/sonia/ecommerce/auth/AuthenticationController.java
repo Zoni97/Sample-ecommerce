@@ -1,7 +1,5 @@
 package it.sonia.ecommerce.auth;
 
-import it.sonia.ecommerce.controller.RegisterRequest;
-
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
