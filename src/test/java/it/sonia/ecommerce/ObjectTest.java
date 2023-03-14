@@ -4,8 +4,19 @@ import it.sonia.ecommerce.auth.AuthenticationRequest;
 import it.sonia.ecommerce.auth.RegisterRequest;
 import it.sonia.ecommerce.model.Role;
 import it.sonia.ecommerce.model.User;
+import it.sonia.ecommerce.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class ObjectTest {
+
+    @Autowired
+    static
+    UserService service;
+
+    public static void deleteUserTest(User user){
+        service.delete(user.getId());
+    }
+
 
     public static RegisterRequest createTestRegisterRequest(){
         return new RegisterRequest(

@@ -1,5 +1,7 @@
 package it.sonia.ecommerce.dao;
 
+import it.sonia.ecommerce.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,6 +15,9 @@ import java.util.List;
 @Repository
 public class UserDAO {
 
+    @Autowired
+    UserRepository repository;
+/*
     public final static List<UserDetails> APPLICATION_USERS = Arrays.asList(
         new User(
             "rev_xx@live.it",
@@ -33,5 +38,5 @@ public class UserDAO {
             .findFirst()
             .orElseThrow(() -> new UsernameNotFoundException("No user was found"))
         ;
-    }
+    } */
 }

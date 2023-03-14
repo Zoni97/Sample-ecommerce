@@ -1,6 +1,7 @@
 package it.sonia.ecommerce.auth;
 
 import it.sonia.ecommerce.config.JwtService;
+import it.sonia.ecommerce.exception.UserAlreadyExistException;
 import it.sonia.ecommerce.model.Role;
 import it.sonia.ecommerce.token.Token;
 import it.sonia.ecommerce.token.TokenType;
@@ -13,6 +14,8 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class AuthenticationService {
@@ -21,6 +24,7 @@ public class AuthenticationService {
     private final PasswordEncoder passwordEncoder;
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
+    String token;
 
     public AuthenticationResponse register(RegisterRequest request) {
         var user = User.builder()
@@ -30,13 +34,19 @@ public class AuthenticationService {
                 .password(passwordEncoder.encode(request.getPassword()))
                 .role(Role.USER)
                 .build();
-        var savedUser = repository.save(user);
-        var jwtToken = jwtService.generateToken(user);
-        saveUserToken(savedUser, jwtToken);
-        return AuthenticationResponse.builder()
-                .token(jwtToken)
-                .build();
+        List<User> userList = repository.findAll();
+        if (userList.stream().anyMatch(u -> u.getEmail().equals(request.getEmail()))){
+            throw new UserAlreadyExistException();
+        } else{
+            var savedUser = repository.save(user);
+            var jwtToken = jwtService.generateToken(user);
+            saveUserToken(savedUser, jwtToken);
+            return AuthenticationResponse.builder()
+                    .token(jwtToken)
+                    .build();
+        }
     }
+
 
     public AuthenticationResponse authenticate(AuthenticationRequest request) {
         authenticationManager.authenticate(

@@ -15,4 +15,13 @@ public interface TokenRepository extends JpaRepository<Token,Integer> {
     List<Token> findAllValidTokenByUser(Integer id);
 
     Optional<Token> findByToken(String token);
+
+    @Override
+    void deleteById(Integer integer);
+
+    void deleteByUserId(Integer id);
+
+    List<Token> findByUserId(Integer id);
+
+
 }
